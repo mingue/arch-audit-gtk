@@ -1,28 +1,31 @@
 [package]
-name = "arch-audit-gtk"
-version = "0.3.1"
-description = "Arch Linux Security Update Notifications"
 authors = ["kpcyrd <git@rxv.cc>"]
-license = "GPL-3.0"
-repository = "https://github.com/kpcyrd/arch-audit-gtk"
+description = "Arch Linux Security Update Notifications"
 edition = "2021"
+license = "GPL-3.0"
+name = "arch-audit-gtk"
+repository = "https://github.com/kpcyrd/arch-audit-gtk"
+version = "0.3.1"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.38"
-arch-audit = "0.1.19"
-dirs-next = "2.0.0"
-env_logger = "0.9"
-glib = "0.14"
-gtk = "0.14"
-humantime = "2.1.0"
-inotify = "0.9.2"
-libappindicator = "0.6"
-log = "0.4.14"
-opener = "0.5"
-rand = "0.8.3"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1.0.64"
-structopt = "0.3.21"
-toml = "0.5.8"
+anyhow = "1"
+arch-audit = "0.1"
+dirs-next = "2"
+env_logger = "0"
+glib = "0"
+gtk = "0"
+humantime = "2"
+inotify = "0"
+libappindicator = "0"
+log = "0"
+opener = "0"
+rand = "0"
+serde = {version = "1", features = ["derive"]}
+serde_json = "1"
+structopt = "0"
+toml = "0"
+
+[patch.crates-io]
+arch-audit = {path = "../arch-audit"}
